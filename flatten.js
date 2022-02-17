@@ -12,26 +12,4 @@ const flatten = function(arr) {
   return newarr;
 };
 
-// assertArrayEqual
-const eqArrays = function(arr1,arr2) {
-  let boo = true;
-  if (arr1.length !== arr2.length) {
-    boo = false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      boo = false;
-    }
-  }
-  return boo;
-};
-
-const assertArraysEqual = function(arr1,arr2) {
-  if (eqArrays(arr1,arr2) === true) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
-  }
-};
-
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+module.exports = flatten;
